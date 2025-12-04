@@ -1,0 +1,67 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>GRASIL-3D</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Nav -->
+			<nav id="nav">
+				<ul class="container">
+					<li><a href="index.html">Home</a></li>
+				</ul>
+			</nav>
+
+		<!-- Galactic Structure Finder (gif) -->
+			<article id="gif" class="wrapper style2">
+				<div class="container">
+					<header>
+						<h2>GRASIL-3D</h2>
+    <p align="justify">
+      To test the galaxy formation models we assume in simulation codes we need to 
+      forward model the simulation outputs (time dependent mass, 6D position-velocities, plus star and gas specific properties) to 
+      observables (broad band images, spectra, integral field unit cubes). This forward modeling is performed with dedicated radiation transfer codes, 
+      which have to account also for dust. Dust grains in the interstellar medium (ISM) and in the circumgalactic medium (CGM) absorb 
+      high energy photons (ultraviolet) and re-emit at longer wavelengths (infrared). As a consequence, galaxies look very different depending on the 
+      particular wavelength at which they are observed.        
+    </p>
+
+    <BR>
+    <div>
+    <img src="images/galaxy_4_bands_reverse.png" alt="grasil3d" style="width:528px;height:auto;"><br>
+    <font color=black> <tt>GRASIL-3D</tt> applied to a
+    <a href="http://adsabs.harvard.edu/abs/2012MNRAS.425.1270S" style="color:black"> MaGICC</a> galaxy</font> 
+    </div>
+    
+
+    <BR>
+    <p align="justify">
+      <a href="http://adsabs.harvard.edu/abs/2014MNRAS.439.3868D" style="color:#DAA520"><tt>GRASIL-3D</tt></a> 
+      is a radiative transfer, ray tracing, fixed grid code written in Fortran/MPI, which couples the dust models in 
+      <a href="http://adsabs.harvard.edu/abs/1998ApJ...509..103S" style="color:#DAA520"><tt>GRASIL</tt></a> 
+      with the output of cosmological simulations. I have implemented the imaging module for <tt>GRASIL-3D</tt>, 
+      including the post-processing code that takes into account the redshift and outputs spectral 
+      energy distributions and images in bands ranging from far ultraviolet (GALEX/FUV) to far infrared (Herschel/SPIRE).  
+      The figure shows how a simulated spiral galaxy changes its appearence depending of the viewing angle (face-on top vs edge-on bottom) 
+      and the spectral window of the observing instrument from far UV (left), to visible blue B (center left), to infrared IR (center right) 
+      and far IR (right).  
+    </p>
+
+
+
+
+
+
+
+
+					</header>
+
+
+
+
+			</article>
+
+</html>

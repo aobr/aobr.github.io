@@ -1,0 +1,79 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Local radiation effects</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Nav -->
+			<nav id="nav">
+				<ul class="container">
+					<li><a href="index.html">Home</a></li>
+				</ul>
+			</nav>
+
+		<!-- Galactic Structure Finder (gif) -->
+			<article id="gif" class="wrapper style2">
+				<div class="container">
+					<header>
+						<h2>Stellar and Bremstrahlung radiation effects in simulated galaxies on-the-fly </h2>
+
+      <p align="justify"> To a large extent, numerical studies of galaxy formation assume a uniform, isotropic and time-dependent 
+        radiation field, known as the ultraviolet background (UVB). This is because coupling the hydrodynamic equations with the radiation transfer 
+        equation slows down simulations by orders of magnitude and also requires excessive memory allocation. While the UVB approximation is reasonable 
+        on large scales, it is definitely not appropriate inside galaxies, where the radiation field varies wildly depending on factors such as the 
+        spatial distribution of the most massive young stars, which produce a large proportion of the UV photons. Another source of UV photons is hot 
+        plasma that emits free-free radiation.         
+        <BR>
+        <BR>
+        I have implemented <a href="https://doi.org/10.1093/mnras/stz2639" style="color:#DAA520">an inverse ray tracing scheme</a> in the N-body smoothed particle hydrodynamics code <a href="http://adsabs.harvard.edu/abs/2017MNRAS.471.2357W" style="color:#DAA520"> <tt>Gasoline2</tt></a>, 
+        counting stellar and gas UV photon sources, and taking the local radiation field (LRF) into account in the energy equation 
+        through the heating and cooling terms. In the optically thin approximation, where absorption effects only occur in the vicinity 
+        of the source and/or sink, the radiation field can be efficiently computed using the same oct-tree structure primarily used to compute 
+        gravitational forces at each particle position. The figure below shows how the radial profile of the HI photoionisation rate changes over 
+        time/redshift in a simulated galaxy which has the mass of the Milky Way at the current epoch. The saturated values at large 
+        radii correspond to the UVB rates at the times shown in the figure. It is clear from this figure that the HI photoionisation rate inside 
+        the galaxy is significantly higher than the UVB level throughout most of this galaxy's history. 
+      </p>
+
+      <div>
+        <img src="images/g826e11_gammaHI_with_z.png" style="width:528px;height:auto;"><br>
+        <font color=black> HI photoionization rates of a Milky Way-like simulated galaxy. Credit: 
+          <a href="https://doi.org/10.1093/mnras/stz2639" style="color:black"> Obreja et al. (2019) </a> </font> 
+        </div>
+      
+
+      <BR>
+      <BR>
+      <p align="justify">
+        Taking these radiation effects into account on-the-fly results in measurable differences in the galaxies and their environments. 
+        The figure below shows how the column density of three different ions (HI, OVI and OVII with ionizing energies of 13.6eV, 138.1eV and 739.3eV) 
+        are affected by the inclusion of the local radiation field (bottom vs top panels). 
+      </p>
+
+        <div>
+          <img src="images/column_density_3ions.png" style="width:528px;height:auto;"><br>
+          <font color=black> HI, OVI and OVII column densities around a simulated Milky Way-like galaxy with (bottom) and without (top) local radiation field effects included. </font> 
+        </div>
+      <BR>
+      <BR>
+
+        <p align="justify">
+        To get similar precision for the radiation field as for the gravitional one with an inverse ray tracing scheme on a Barnes-Hut tree code 
+        we have two options. The first one is to construct a different tree for the radiation sources with a smaller threshold &theta;.
+        The second option, and our choice, is to use <a href="https://doi.org/10.1016/j.cpc.2019.107081" style="color:#DAA520">efficient higher order multipoles</a> and stick to a one-tree for both gravity and radiation. 
+        </p>
+
+
+
+					</header>
+
+
+
+
+			</article>
+
+</html>

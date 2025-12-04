@@ -1,0 +1,59 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Estimating CGM and AGN properties</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Nav -->
+			<nav id="nav">
+				<ul class="container">
+					<li><a href="index.html">Home</a></li>
+				</ul>
+			</nav>
+
+		<!-- CGM vs AGN -->
+			<article id="gif" class="wrapper style2">
+				<div class="container">
+					<header>
+						<h2>Estimating CGM and AGN properties with simulations and machine learning </h2>
+
+    <p align="justify"> Our work on <a href="https://doi.org/10.1093/mnras/stad3410" style="color:#DAA520">AGN radiation effects on the CGM</a> only scratched 
+      the surface of the possibilities of using nebular emission to measure in tandem the CGM and AGN properties. To fulfill this potential, we have created a 
+      large database of photoionization models with <a href="https://www.astroscu.unam.mx/rmaa/RMxAA..53-2/PDF/RMxAA..53-2_gferland.pdf" style="color:#DAA520">Cloudy</a>, 
+      varying the AGN spectrum to cover the full range of observed black hole (BH) masses and activity rates, and the broad range of possible CGM properties.       
+    <BR>  
+    <BR>
+    </p>
+  
+    <div>
+      <img src="images/database_agn_models.png"> <br>
+      <font color=black> Left: distribution of AGN spectrum parameters (left) compared to the distribution of SDSS quasars (colored image) in the space of BH 
+        mass (horizontal axis) and accretion rate (vertical axis). Right: variation of AGN spectrum with the accretion rate &lambda; for fixed BH mass and distance 
+        between AGN and gas patch. 
+        The continuum is computed with the <a href="https://doi.org/10.1111/j.1365-2966.2011.19779.x" style="color:#DAA520"><tt>OPTXAGN</tt></a> code 
+        and the lines are scaled to the continuum based on the SDSS line estimates of <a href="10.3847/1538-4365/ab99c5" style="color:#DAA520">Rakshit et al. (2020</a>). 
+      </font> 
+    </div>
+  
+      <BR>
+      <p align="justify">
+        Each black point in the top left figure represents a family of 4D models with a fixed incident spectral shape. 
+        The 4D parameters are the flux normalisation (distance to the source) and the gas temperature, density and composition. 
+        Running all these models took approximately six months of wall-clock time on an AMD EPYC 7713 64-Core Processor 
+        and generated around 150 Gb of data. Before we can move on to the exciting part of training compact and fast machine 
+        learning (ML) models for inference on this data, the raw, messy outputs need to be processed into well-behaved 6D arrays.         
+      </p>
+
+
+					</header>
+
+
+
+
+			</article>
+
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>gsf</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Nav -->
+			<nav id="nav">
+				<ul class="container">
+					<li><a href="index.html">Home</a></li>
+				</ul>
+			</nav>
+
+		<!-- Galactic Structure Finder (gif) -->
+			<article id="gif" class="wrapper style2">
+				<div class="container">
+					<header>
+						<h2>Galactic Structure Finder (<tt>gsf</tt>)</h2>
+    <p align="justify"> Galaxies are usually classified according to their appearance as either late type (barred or non-barred spirals and irregulars) 
+      or early type (ellipticals). Lenticular galaxies represent the transition between these two classes. These classes can be understood as 
+      forming an evolutionary sequence. Ellipticals are older and less organised internally due to mergers, whereas spirals are younger and 
+      have distinct features such as disks, bulges, bars and spiral arms. Spirals are also thought to have experienced a less violent merger history. 
+      If we can causally link the presence of substructures (and their properties) to specific events and their timings, 
+      we can effectively build a <tt>timeoscope</tt> to look backwards in time at observed galaxies. 
+      Additionally, specific features could offer insights into the surrounding dark matter. 
+      To this end, I have developed an analysis code that can segment simulated galaxies into physically meaningful components.
+    
+    <BR>
+    <BR>  
+
+      The first version of <a href="http://adsabs.harvard.edu/abs/2018MNRAS.477.4915O" style="color:#DAA520"><tt>Galactic Structure Finder (gsf)</tt></a>, 
+      which is mainly written in Python, uses direct N-body summation in Fortran-OpenMP to accurately compute gravitational forces. 
+      It can identify dynamical structures such as thin/thick disks, bulges, spheroids and stellar halos within a fixed 3D angular momentum-energy space. 
+      The rationale behind this code was the need for a data-driven galaxy segmentation instead of a model-driven segmentation, 
+      where restrictive and poorly founded physical distribution functions would have to be assumed for the various components. 
+      After experimenting with various clustering algorithms, I opted for Gaussian Mixture Models (GMMs) and developed the code as an 
+      advanced usage wrapper for the GMM class in the open-source library <a href="http://scikit-learn.org/stable/" style="color:#DAA520"><tt>scikit-learn</tt></a>. 
+    </p> 
+     <BR>
+       
+    <div>
+    <img src="images/gsf2018_fig.png" alt="gsf"> <br>
+    <font color=black> Tracing back in time the Lagrangian mass of some individual dynamical components of a simulated spiral galaxy. In the teenager years of 
+      the Universe (1st column panels) the stellar thin-disk-to-be was only f=1% stars and spread into large filamentary structures, while the stellar halo-to-be 
+      was much more compact and already 27% in stellar form. Adapted from <a href="http://adsabs.harvard.edu/abs/2018MNRAS.477.4915O" style="color:#DAA520"> 2018MNRAS.477.4915O </a> </font> 
+    </div>
+
+    <BR>
+    <p align="justify">
+      The second version of the code (<a href="https://github.com/aobr/gsf2" style="color:#DAA520"> <tt>gsf2</tt></a>) 
+      goes a long way in the direction of automating the whole galaxy analysis process. 
+      The code now has two information criteria that can be used to select <i>an optimal number of components</i>, 
+      a naming scheme based on physical properties and the ability to select from an infinite range of feature spaces. 
+      It is the latter code feature in particular that has enabled us to devise a method of isolating galaxy bars, 
+      which are notoriously difficult to separate from the other components.        
+    </p>
+    <BR>
+    <div>
+      <img src="images/gsf2025_fig.png" alt="gsf"> <br>
+      <font color=black> Segmentation of a barred galaxy from the <a href="https://doi.org/10.1093/mnras/stz2338" style="color:#DAA520"> TNG50</a> simulation 
+      using <tt>gsf2</tt>. The bar constitutes 36% of the total mass and appears significantly asymmetric in the face-on projection (b/a = 0.4). 
+      Separating the bar enables us to easily estimate properties that are difficult to measure, 
+      such as the pattern speed &Omega;<sub>b</sub>. Adapted from the paper just submitted to MNRAS.</font>
+    </div>
+					</header>
+
+
+
+
+			</article>
+
+</html>

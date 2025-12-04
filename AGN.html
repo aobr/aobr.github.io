@@ -1,0 +1,73 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>AGN radiation effects</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Nav -->
+			<nav id="nav">
+				<ul class="container">
+					<li><a href="index.html">Home</a></li>
+				</ul>
+			</nav>
+
+		<!-- AGN radiation effects in simulated galaxies -->
+			<article id="gif" class="wrapper style2">
+				<div class="container">
+					<header>
+						<h2>AGN radiation effects in simulated galaxies </h2>
+
+    <p align="justify"> Accreting supermassive black holes, also known as active galactic nuclei (AGN), emit copious amounts of ultraviolet (UV) and X-ray 
+      photons that can significantly impact the surrounding gas, from the small interstellar medium (ISM) to the circumgalactic medium (CGM) and beyond. 
+      In simulations, this largely unknown physical phenomenon is implemented in two ways: as a release of thermal energy, or as a momentum boost to nearby 
+      gas particles/cells. The direct effect of AGN radiation on the heating and cooling terms in the energy equation is usually ignored. 
+      In a recent <a href="https://doi.org/10.1093/mnras/stad3410" style="color:#DAA520">paper</a>, we demonstrated that this radiation effect alone can significantly 
+      alter the balance between heating and cooling in the CGM of a massive simulated galaxy at redshift z = 3. Overcooling of the CGM is suppressed by a factor depending 
+      on the solid angle through which this radiation can propagate (corresponding to the vertex angle &alpha; of a bi-cone).                 
+      <BR>
+      <BR>
+    </p>
+
+    <div>
+      <img src="images/stad3410fig6.jpeg" style="width:528px;height:auto;"> <br>
+      <font color=black> The mass budget of a simulated galaxy's CGM as a function of the vertex angle where AGN radiation can propagate. As &alpha; increases 
+        (&alpha;=0<sup>o</sup> corresponds to no AGN radiation, while &alpha;=180<sup>o</sup> to isotropic AGN radiation) less/more of the CGM is cooling/heating. 
+        These effects depend also on how massive is the black hole and how strong is the accretion (&lambda;=L<sub>bol</sub>/L<sub>Edd</sub>). Figure adapted from 
+        <a href="https://doi.org/10.1093/mnras/stad3410" style="color:black"> 2024MNRAS.527.8078O </a> </font> 
+      </div>
+
+    <BR>
+    <p align="justify">
+      AGN radiation also affects CGM observables. By combining observations of various line emissions with absorption studies, we demonstrated that it may be possible 
+      to constrain the intrinsic properties of the CGM (density, temperature, composition, and ionisation state) and the properties of the AGN radiation source (mass, 
+      accretion rate, and vertex angle of the ionisation cone). The figure below shows how the averaged observed surface brightness radial profiles compare with four 
+      AGN radiation models applied in post-processing to a massive simulated galaxy.       
+    </p>
+     
+    <BR>
+      <div>
+        <img src="images/stad3410fig12.jpeg" style="width:828px;height:auto;"> <br>
+        <font color=black> Simulated surface brighteness profiles in Ly&alpha;, HeII and CIV for various &alpha; angles assuming a 10<sup>9</sup>M<sub>&#9737;</sub> 
+          black hole accreting at 10% of its Eddington (~maximum) rate. Figure adapted from 
+        <a href="https://doi.org/10.1093/mnras/stad3410" style="color:black"> 2024MNRAS.527.8078O </a></font> 
+      </div>
+      
+      <BR>
+      <p align="justify">
+        To realise the full potential of this idea, I have created a large database of AGN photoionisation models for use in simulations and in an inference 
+        pipeline that constrains the CGM and AGN properties of real galaxies in tandem.          
+      </p>
+
+
+					</header>
+
+
+
+
+			</article>
+
+</html>
